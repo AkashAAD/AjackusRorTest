@@ -32,5 +32,3 @@ Things you may want to cover:
 * API Endpoint
   ```For Spanish: localhost:3000/api/v1/contact/contact?locale=es```
   ```For English: localhost:3000/api/v1/contact/contact?locale=en OR localhost:3000/api/v1/contact/contact```
-
-

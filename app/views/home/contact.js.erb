@@ -1,0 +1,7 @@
+<%unless @contact.errors.blank? %>
+  $(".errors").css('color', 'red');
+  $(".errors").html('<%= @contact.errors.full_messages.join(', ') %>');
+<%else%>
+  $(".errors").css('color', 'green');
+  $(".errors").html('<%= t("contact.save_message") %>');
+<%end%>

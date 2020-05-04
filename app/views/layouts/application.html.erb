@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AjackusRorTest - Contact V17</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag 'icons/favicon.ico' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div>
+      <%= content_tag :span do %>
+        <%= link_to "Switch to English", "?locale=en", method: :get  %>
+      <%end unless I18n.locale.eql?(:en) %>
+      <%= content_tag :span do %>
+        <%= link_to "Switch to Spanish", "?locale=es", method: :get %>
+      <%end unless I18n.locale.eql?(:es) %>
+    </div>
+    <%= yield %>
+    <div id="dropDownSelect1"></div>
+    <script>
+      $(".selection-2").select2({
+        minimumResultsForSearch: 20,
+        dropdownParent: $('#dropDownSelect1')
+      });
+    </script>    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-23581568-13');
+    </script>
+  </body>
+</html>

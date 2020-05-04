@@ -1,0 +1,94 @@
+<div class="container-contact100">
+  <div class="wrap-contact100">
+  <%= form_with(class: "contact100-form validate-form") do |form| %>
+      <span class="contact100-form-title">
+        <%= t('label.send_us_message') %>
+        <%#= t('hello') %>
+      </span>
+      <span class="errors"></span>
+      <label class="label-input100" for="first-name"><%= t('label.tell_your_name') %> *</label>
+      <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
+        <input id="first-name" class="input100" type="text" name="contact[first_name]" placeholder="<%= t('contact.placeholder.first_name') %>">
+        <span class="focus-input100"></span>
+      </div>
+      <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
+        <input class="input100" type="text" name="contact[last_name]" placeholder="<%= t('contact.placeholder.last_name') %>">
+        <span class="focus-input100"></span>
+      </div>
+
+      <label class="label-input100" for="email"><%= t('label.enter_your_email') %> *</label>
+      <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+        <input id="email" class="input100" type="text" name="contact[email]" placeholder="<%= t('label.eg') %>. example@email.com">
+        <span class="focus-input100"></span>
+      </div>
+
+      <label class="label-input100" for="phone"><%= t('label.enter_phone_number') %></label>
+      <div class="wrap-input100">
+        <input id="phone" class="input100" type="text" name="contact[phone_number]" placeholder="<%= t('label.eg') %>. +1 800 000000">
+        <span class="focus-input100"></span>
+      </div>
+
+      <label class="label-input100" for="message"><%= t('label.message') %> *</label>
+      <div class="wrap-input100 validate-input" data-validate = "Message is required">
+        <textarea id="message" class="input100" name="contact[message]" placeholder="<%= t('contact.placeholder.write_us_message') %>"></textarea>
+        <span class="focus-input100"></span>
+      </div>
+
+      <div class="container-contact100-form-btn">
+        <button class="contact100-form-btn">
+          <%= t('label.send_message') %>
+        </button>
+      </div>  
+  <% end %>
+
+    <div class="contact100-more flex-col-c-m" style="background-image: url('assets/bg-01.jpg');">
+      <div class="flex-w size1 p-b-47">
+        <div class="txt1 p-r-25">
+          <span class="lnr lnr-map-marker"></span>
+        </div>
+
+        <div class="flex-col size2">
+          <span class="txt1 p-b-20">
+            <%= t('label.address') %>
+          </span>
+
+          <span class="txt2">
+            <%= t('label.actual_address') %>
+          </span>
+        </div>
+      </div>
+
+      <div class="dis-flex size1 p-b-47">
+        <div class="txt1 p-r-25">
+          <span class="lnr lnr-phone-handset"></span>
+        </div>
+
+        <div class="flex-col size2">
+          <span class="txt1 p-b-20">
+            <%= t('label.lets_talk') %>
+          </span>
+
+          <span class="txt3">
+            +1 800 1236879
+          </span>
+        </div>
+      </div>
+
+      <div class="dis-flex size1 p-b-47">
+        <div class="txt1 p-r-25">
+          <span class="lnr lnr-envelope"></span>
+        </div>
+
+        <div class="flex-col size2">
+          <span class="txt1 p-b-20">
+            <%= t('label.general_support') %>
+          </span>
+
+          <span class="txt3">
+            contact@example.com
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+en:
+  label:
+    send_us_message: Send Us A Message
+    tell_your_name: Tell us your name
+    enter_your_email: Enter your email
+    enter_phone_number: Enter phone number
+    message: Message
+    send_message: Send Message
+    address: Address
+    actual_address: Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+    lets_talk: Lets Talk
+    general_support: General Support
+    eg: Eg
+  contact:
+    placeholder:
+      first_name: First Name
+      last_name: Last Name
+      write_us_message: Write us a message
+    save_message: Team will contact you soon, Thanks for the contact us.
+  activerecord:
+    errors:
+      models:
+        contact:
+          attributes:
+            email:
+              blank: "can't be blank."
+            phone_number:
+              blank: "can't be blank."
+            first_name:
+              blank: "can't be blank."
+            last_name:
+              blank: "can't be blank."
+            message:
+              blank: "can't be blank."

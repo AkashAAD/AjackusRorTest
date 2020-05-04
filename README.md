@@ -5,7 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version - 2.5.1
+* Ruby version
+```2.5.1
+```
 
 * System Dependencies
 
@@ -14,7 +16,8 @@ Things you may want to cover:
 * Database Creation
 
 * Database initialization
-  rake db:create db:migrate db:seed
+```rake db:create db:migrate db:seed
+```
 
 * How to run the test suite
 
@@ -23,4 +26,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * Run Application
-  rails s
+```rails s
+``` 

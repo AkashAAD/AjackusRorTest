@@ -69,5 +69,5 @@ Rails.application.configure do
     password: "Aka786sh!!",
     authentication: 'plain',
     enable_starttls_auto: true
-  }  
+  }
 end

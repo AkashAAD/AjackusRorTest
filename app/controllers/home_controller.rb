@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class HomeController < ApplicationController
   include HomeHelper
 
@@ -11,6 +13,7 @@ class HomeController < ApplicationController
   end
 
   private
+
   def contact_params
     params.require(:contact).permit(:first_name, :last_name, :email, :phone_number, :message)
   end

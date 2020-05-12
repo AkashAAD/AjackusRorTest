@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
+  include HomeHelper
+
   def contact
     if request.post?
-      @contact = Contact.new(contact_params)
-      @contact.save
-      ApplicationMailer.contact_us(@contact).deliver_now
+      @contact = create_contact(contact_params)
       respond_to do |format|
         format.js
       end

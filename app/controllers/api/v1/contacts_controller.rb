@@ -1,12 +1,12 @@
 class Api::V1::ContactsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  include HomeHelper
 
   def contact
     if request.post?
-      @contact = Contact.new(contact_params)
-      if @contact.save
-        ApplicationMailer.contact_us(@contact).deliver_now
-        render json: { status: 200, messages: t("contact.save_message") }
+      @contact = create_contact(contact_params)
+      if @contact.errors.messages.blank?
+        render json: { status: 200, messages: t("contact.save_message"), contact: @contact }
       else
         render json: { status: 401, messages: @contact.errors.full_messages.join(', ') }
       end
